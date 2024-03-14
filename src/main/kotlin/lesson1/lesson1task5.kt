@@ -1,13 +1,14 @@
 package lesson1
 
-fun main () {
-    val secondsInSpace = 6480
-    val minutesInSpace = 108
-    val fullHoursInSpace = 1
-    val minutesLeft = 48
-    val secondsLeft = 0
+fun main() {
+    val totalSecondsInSpace = 6480
+    val totalMinutesInSpace = totalSecondsInSpace / 60 // 108
+    val fullHoursInSpace = totalMinutesInSpace / 60 // 1
 
-    print (String.format("%02d",fullHoursInSpace)); print (":")
-    print (minutesLeft); print (":")
-    print (String.format("%02d",secondsLeft))
+    val fullHoursInMinutes = fullHoursInSpace * 60 // 60
+    val minutesLeft = totalMinutesInSpace - fullHoursInMinutes // 48
+    val secondsLeft = totalSecondsInSpace % 60 // 00
+
+    println("%02d:%02d:%02d".format(fullHoursInSpace, minutesLeft, secondsLeft))
+
 }
