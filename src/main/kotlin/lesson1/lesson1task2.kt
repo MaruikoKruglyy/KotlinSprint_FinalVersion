@@ -1,6 +1,6 @@
 package lesson1
 
-fun main () {
+fun main() {
     val numberOfOrders: Int = 75
     val purchaseGratitudeMessage: String = "Благодарим за покупку!"
 
@@ -8,7 +8,7 @@ fun main () {
     println(purchaseGratitudeMessage)
 
     var numberOfEmployees: Int = 2000
-//    println(numberOfEmployees)
+//  println(numberOfEmployees)
 
     numberOfEmployees = 1999
     println(numberOfEmployees)
