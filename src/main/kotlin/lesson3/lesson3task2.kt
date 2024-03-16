@@ -10,4 +10,5 @@ fun main() {
 
     println("[$birthSurname $name $patronymicName, $ageBeforeMarriage]")
     println("[$marriedSurname $name $patronymicName, $ageOfMarriage]")
+
 }
