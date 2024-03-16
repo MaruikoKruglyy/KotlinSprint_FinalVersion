@@ -10,6 +10,6 @@ fun main () {
     val extraCristalOre = cristalOre * buffPercentage / MAXIMUM_PERCENTAGE
     val extraIronOre = ironOre * buffPercentage / MAXIMUM_PERCENTAGE
 
-    print("Кристаллическая руда +"); println (extraCristalOre)
-    print("Железная руда +"); println (extraIronOre)
+    println("Кристаллическая руда +$extraCristalOre")
+    println("Железная руда +$extraIronOre")
 }
