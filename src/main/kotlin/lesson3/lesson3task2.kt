@@ -10,4 +10,5 @@ fun main() {
     age = 22
     println("[$surname $name $patronymicName, $age]")
 
+
 }
