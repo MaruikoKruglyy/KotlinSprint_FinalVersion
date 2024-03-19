@@ -3,6 +3,8 @@ package lesson4
 const val MIN_CREW = 55
 const val RECOMMENDED_CREW = 70
 const val MIN_PROVISION_BOXES = 50
+const val IS_WEATHER_GOOD = true
+const val IS_SHIP_NOT_DAMAGED = true
 
 fun main() {
 
@@ -18,10 +20,10 @@ fun main() {
     println(
         "Научно-исследовательский корабль может приступить к долгосрочному плаванию: " +
                 "${
-                    shipBodyNotDamaged && crew in MIN_CREW..RECOMMENDED_CREW &&
+                    shipBodyNotDamaged == IS_SHIP_NOT_DAMAGED && crew in MIN_CREW..RECOMMENDED_CREW &&
                             provisionsInBoxes > MIN_PROVISION_BOXES ||
-                            crew == RECOMMENDED_CREW && provisionsInBoxes > MIN_PROVISION_BOXES &&
-                            goodWeatherConditions
+                            crew == RECOMMENDED_CREW && provisionsInBoxes >= MIN_PROVISION_BOXES &&
+                            goodWeatherConditions == IS_WEATHER_GOOD
                 }"
     )
 }
