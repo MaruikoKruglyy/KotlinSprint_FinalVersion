@@ -6,14 +6,14 @@ const val BENEFICIAL_HUMIDITY_PERCENTAGE = 20
 const val ADVERSE_SEASON = "зима"
 
 fun main() {
-    val weatherNow = IS_SUNNY
-    val tentNow = IS_AWNING_OPEN
+    val isWeatherNowSunny = true
+    val isAwningOpenNow = true
     val humidityNow = 20
     val seasonNow = "зима"
 
     println(
         "Благоприятные ли условия сейчас для роста бобовых? ${
-            weatherNow && tentNow &&
+            isWeatherNowSunny == IS_SUNNY && isAwningOpenNow == IS_AWNING_OPEN &&
                     humidityNow == BENEFICIAL_HUMIDITY_PERCENTAGE && seasonNow != ADVERSE_SEASON
         }"
     )
