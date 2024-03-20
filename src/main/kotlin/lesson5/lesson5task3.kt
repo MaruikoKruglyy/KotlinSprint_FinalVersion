@@ -4,10 +4,12 @@ fun main() {
 
     val winningNumberOne = 41
     val winningNumberTwo = 5
+
     println("Введите первое число:")
-    val answerOne = readln().toInt()
+        val answerOne = readln().toInt()
+
     println("Введите второе число:")
-    val answerTwo = readln().toInt()
+        val answerTwo = readln().toInt()
 
     val lineToPrint = when {
         answerOne == winningNumberOne &&
