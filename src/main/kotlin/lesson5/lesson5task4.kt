@@ -21,7 +21,6 @@ fun main() {
         println("Ваши данные проверены, и о, чудо, они верны... ")
     } else if (userName == REGISTERED_NAME) {
         println("Так и знал, пароль неверный...")
-    } else {
     }
 }
 
