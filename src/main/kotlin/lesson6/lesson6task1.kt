@@ -6,17 +6,13 @@ fun main() {
     println("Введите новый пароль:")
     val newPassword = readln()
 
-    println("Введите свой логин:")
-    var enteredLogin = readln()
-    println("Введите свой пароль:")
-    var enteredPassword = readln()
-
-    while (enteredLogin != newLogin || enteredPassword != newPassword) {
-        println("Логин или пароль введены неверно!\nВведите свой логин:")
-        enteredLogin = readln()
-        println("Введите свой пароль:")
-        enteredPassword = readln()
-    }
+   do {
+       println("Введите свой логин:")
+       val enteredLogin = readln()
+       println("Введите свой пароль:")
+      val enteredPassword = readln()
+   }
+    while (enteredLogin != newLogin || enteredPassword != newPassword)
 
     println("Авторизация прошла успешно.")
 
