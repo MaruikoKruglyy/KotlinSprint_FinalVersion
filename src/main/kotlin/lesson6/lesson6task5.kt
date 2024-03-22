@@ -1,29 +1,23 @@
 package lesson6
 
-import kotlin.random.Random
-
 fun main() {
 
-    var numberOne = Random.nextInt(from = 1, until = 10)
-    var numberTwo = Random.nextInt(from = 1, until = 10)
+    var numberOne = (1..9).random()
+    var numberTwo = (1..9).random()
     var rightAnswer = numberOne + numberTwo
-    var numberOfTrials = 3 - 1 // 3 - the first try
+    var numberOfTrials = 3
 
-    println("Пожалуйста, решите следующий пример и введите ответ: $numberOne + $numberTwo =")
-
-    var userAnswer = readln().toInt()
-
-    while (userAnswer != rightAnswer && numberOfTrials > 0) {
-        println("Ответ неверен! Осталось попыток: ${numberOfTrials--}")
-       numberOne = Random.nextInt(from = 1, until = 10)
-        numberTwo = Random.nextInt(from = 1, until = 10)
-        rightAnswer = numberOne + numberTwo
+    do {
         println("Пожалуйста, решите следующий пример и введите ответ: $numberOne + $numberTwo =")
-        userAnswer = readln().toInt()
-    }
-
-    when {
-        userAnswer == rightAnswer -> println("Добро пожаловать!")
-        numberOfTrials == 0 -> println("Доступ запрещен!")
-    }
+        val userAnswer = readln().toInt()
+        if (userAnswer == rightAnswer) {
+            println("Добро пожаловать!")
+            return
+        }
+        println("Ответ неверен! Осталось попыток: ${--numberOfTrials}")
+        numberOne = (1..9).random()
+        numberTwo = (1..9).random()
+        rightAnswer = numberOne + numberTwo
+    } while (userAnswer != rightAnswer && numberOfTrials > 0)
+    println("Доступ запрещен!")
 }
