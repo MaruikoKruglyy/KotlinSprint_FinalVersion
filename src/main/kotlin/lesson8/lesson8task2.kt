@@ -11,8 +11,6 @@ fun main() {
         if (i == searchedIngredient) {
             println("Ингредиент $searchedIngredient в рецепте есть")
             return
-        } else {
-            continue
         }
     }
     println("Такого ингредиента в рецепте нет")
