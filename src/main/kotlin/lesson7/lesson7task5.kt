@@ -5,12 +5,17 @@ fun main() {
 
     println("Введите длину пароля, минимальная длина 6 символов:")
     var passwordLength = readln().toInt()
-    while (passwordLength < 5) {
-        println("Ведите число выше 5!")
+    while (passwordLength < 6) {
+        println("Ведите число не меньше шести!")
         passwordLength = readln().toInt()
+
     }
-    for (i in 1..passwordLength) {
-        val password = listOf((1..9).random(), ('a'..'z').random(), ('A'..'Z').random())
-        print(password.random())
-    }
+    var password = listOf((1..9).random(), ('a'..'z').random(), ('A'..'Z').random())
+for (i in password) {
+    print(i)
+}
+for (i in 4..passwordLength) {
+    password = listOf((1..9).random(), ('a'..'z').random(), ('A'..'Z').random())
+    print(password.random())
+}
 }
