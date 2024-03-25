@@ -8,10 +8,7 @@ fun main() {
     val searchedIngredient = readln()
 
     when (searchedIngredient) {
-        arrayOfIngredients[0] -> println("Ингредиент $searchedIngredient в рецепте есть")
-        arrayOfIngredients[1] -> println("Ингредиент $searchedIngredient в рецепте есть")
-        arrayOfIngredients[2] -> println("Ингредиент $searchedIngredient в рецепте есть")
-        arrayOfIngredients[3] -> println("Ингредиент $searchedIngredient в рецепте есть")
+        in arrayOfIngredients -> println("Ингредиент $searchedIngredient в рецепте есть")
         else -> println("Такого ингредиента в рецепте нет")
     }
 
