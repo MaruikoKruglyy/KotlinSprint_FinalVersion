@@ -11,5 +11,4 @@ fun main() {
         in arrayOfIngredients -> println("Ингредиент $searchedIngredient в рецепте есть")
         else -> println("Такого ингредиента в рецепте нет")
     }
-
 }
