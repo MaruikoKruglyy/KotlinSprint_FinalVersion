@@ -10,12 +10,12 @@ fun main() {
         passwordLength = readln().toInt()
 
     }
-    var password = listOf((1..9).random(), ('a'..'z').random(), ('A'..'Z').random())
+    val password = mutableListOf((1..9).random(), ('a'..'z').random(), ('A'..'Z').random())
 for (i in password) {
     print(i)
 }
 for (i in 4..passwordLength) {
-    password = listOf((1..9).random(), ('a'..'z').random(), ('A'..'Z').random())
-    print(password.random())
+    password.shuffle()
+      print(password.random())
 }
 }
