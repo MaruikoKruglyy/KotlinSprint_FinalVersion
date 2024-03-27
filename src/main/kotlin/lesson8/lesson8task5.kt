@@ -6,7 +6,7 @@ fun main() {
     val numberOfIngredients = readln().toInt()
 
     val arrayOfIngredients = arrayOfNulls<String>(numberOfIngredients)
-for (i in 0..<numberOfIngredients) {
+for (i in 0 until numberOfIngredients) {
 println("Введите ингредиент:")
     val userIngredient = readln()
     arrayOfIngredients[i] = userIngredient
